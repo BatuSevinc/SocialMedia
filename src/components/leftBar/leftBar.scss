@@ -1,31 +1,43 @@
-.leftBar{
-    flex:2;
-    .container{
-        padding: 20px;
+@import '../../style.scss';
 
-        hr{
-            margin: 20px 0;
-            border: none;
-            height: 0.5px;
-            background-color: lightgrey;
+.leftBar{
+    @include themify($themes){
+        flex:2;
+        position: sticky;
+        top: 50px;
+        height: calc(100vh - 70px); // navbarla üst üste binmemesi için ekran boyutundan (100vh) navbar'ın paddingleriyle beraber kapladığı alan çıkartıldı.
+        overflow: scroll; // eğer 100vh'ı aşacak kadar içerik varsa scroll oluşturur.
+        background-color: themed('bg');
+        color: themed('textColor');
+        &::-webkit-scrollbar{   // scrool bar'ın gizlenmesini sağlıyor.
+            display: none;
         }
-        .menu{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            span{
-                font-size: 12px;
+        .container{
+            padding: 20px;
+            
+            hr{
+                margin: 20px 0;
+                border: none;
+                height: 0.5px;
+                background-color: themed('border');
             }
-            .user{
+            .menu{
                 display: flex;
-                align-items: center;
-                gap: 10px;
-                img{
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    object-fit: cover;
+                flex-direction: column;
+                gap: 20px;
+                span{
+                    font-size: 12px;
                 }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
                 span{
                     font-size: 14px;
                 }
@@ -38,9 +50,10 @@
                     width: 30px;
                 }
                 span{
-                font-size: 14px;
+                    font-size: 14px;
                 }
             }
         }
+    }
     }
 }
