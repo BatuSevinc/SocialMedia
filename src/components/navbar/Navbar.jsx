@@ -19,23 +19,23 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>KukaSocial</span>
         </Link>
-        <HomeOutlinedIcon />
+        <HomeOutlinedIcon className="navbarIcon"/>
         {darkMode ? (
-          <WbSunnyOutlinedIcon onClick={toggle} />
+          <WbSunnyOutlinedIcon className="navbarIcon" onClick={toggle} />
         ) : (
-          <DarkModeOutlinedIcon onClick={toggle} />
+          <DarkModeOutlinedIcon className="navbarIcon" onClick={toggle} />
         )}
-        <GridViewOutlinedIcon />
+        <GridViewOutlinedIcon className="navbarIcon" />
         <div className="search">
           <SearchOutlinedIcon />
           <input type="text" placeholder="Search.." />
         </div>
       </div>
       <div className="right">
-        <PersonOutlinedIcon />
-        <EmailOutlinedIcon />
-        <NotificationsOutlinedIcon />
-        <div className="user">
+        <PersonOutlinedIcon className="navbarIcon" />
+        <EmailOutlinedIcon className="navbarIcon" />
+        <NotificationsOutlinedIcon className="navbarIcon" />
+        <div className="user navbarIcon">
           <img
             src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""

@@ -19,7 +19,6 @@ const App = () => {
   const currentUser = true; // 1 Numara
 
   const {darkMode} = useContext(DarkModeContext);
-  console.log(darkMode)
 
   const Layout = () => { 
     return (
